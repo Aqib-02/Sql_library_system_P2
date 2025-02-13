@@ -146,7 +146,14 @@ SELECT
  JOIN employees AS e2
  ON e2.emp_id=b.manager_id;
  
- -- Task 10: Retrieve the List of Books Not Yet Returned
+ -- Task 10.Create a Table of Books with Rental Price Above a Certain Threshold
+
+CREATE TABLE expensive_books AS
+SELECT * FROM books
+WHERE rental_price > 7.00;
+
+ -- Task 11: Retrieve the List of Books Not Yet Returned
+ 
  SELECT 
   *
  FROM issued_status AS ist
@@ -155,7 +162,7 @@ SELECT
  WHERE ret.return_id IS NULL;
  
  
- -- Task 11: Identify Members with Overdue Books
+ -- Task 12: Identify Members with Overdue Books
  
  SELECT 
   t1.member_id,
@@ -173,7 +180,7 @@ SELECT
   WHERE t4.return_date IS NULL 
   ORDER BY 1;
    
--- Task 12: Branch Performance Report
+-- Task 13: Branch Performance Report
 CREATE TABLE branch_report AS
 SELECT 
  e.branch_id,
@@ -192,7 +199,7 @@ JOIN books AS b
  
  SELECT * FROM branch_report;
  
- -- Task 13: Find Employees with the Most Book Issues Processed
+ -- Task 14: Find Employees with the Most Book Issues Processed
 
 SELECT 
  e.emp_id,
