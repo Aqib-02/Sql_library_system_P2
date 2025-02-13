@@ -18,7 +18,7 @@ This project demonstrates the implementation of a Library Management System usin
 ## Project Structure
 
 - **Database Creation**: Created a database named `library_db`.
-- **Table Creation**: Created tables for branches, employees, members, books, issued status, and return status. Each table includes relevant columns and relationships.
+- **Table Creation**: Created tables for branches, employees, members, books, issued status, and return status.
 
 ```sql
 CREATE DATABASE library_db;
